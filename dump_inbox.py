@@ -46,8 +46,6 @@ if __name__ == '__main__':
     note_store = client.get_note_store()
 
     notes = get_notebook_list(note_store, os.environ["INBOX_NOTEBOOK_GUID"], args.number).notes
-
-    # print('Notes', notes)
     
     for counter, note in enumerate(notes, start=1):
         print('\n--------- %s ---------' % counter)
